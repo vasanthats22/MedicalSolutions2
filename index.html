@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical Solutions - Home1</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #f5f5f5;
+    }
+
+    /* HERO SECTION */
+    .hero {
+        width: 100%;
+        height: 280px;
+        background: url('medical1.webp') center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        background: rgba(0,0,0,0.45);
+        padding: 10px 20px;
+        border-radius: 8px;
+    }
+    
+    /* TWO BOX SECTION */
+    .two-box {
+        padding: 40px 5%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1200px;
+        margin: auto;
+        justify-content: space-between;
+
+    }
+
+    .box {
+        background: url('medical2.webp') center/cover no-repeat;
+        padding: 60px 20px;
+        height: 180px;
+        color: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .box:nth-child(2) {
+        background: url('medical3.webp') center/cover no-repeat;
+    }
+
+    .box:nth-child(3) {
+        background: url('medical4.webp') center/cover no-repeat;
+    }
+
+    .box:nth-child(4) {
+        background: url('medical5.webp') center/cover no-repeat;
+    }
+
+    .box h3 {
+        font-size: 24px;
+        text-shadow: 0px 0px 6px rgba(0,0,0,0.7);
+    }
+
+    .box button {
+        margin-top: 15px;
+        padding: 8px 18px;
+        border: none;
+        background: #ff7a00;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+
+    .box button:hover {
+        background: #e16a00;
+    }
+
+    /* SECTION TITLES */
+    h2.section-title {
+        text-align: center;
+        margin: 40px 0 20px 0;
+        font-size: 26px;
+        color: #333;
+    }
+
+    /* PRODUCT GRID */
+    .product-grid {
+        padding: 10px 5% 40px 5%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .product-card {
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 0 8px rgba(0,0,0,0.08);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .product-card h4 {
+        margin: 10px 0 5px;
+        font-size: 17px;
+    }
+
+    .price {
+        color: #008b55;
+        font-weight: bold;
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+
+    .product-card button {
+        padding: 8px 14px;
+        border: none;
+        background: #0c9fad;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .product-card button:hover {
+        background: #0a7f89;
+    }
+
+    /* FAST DELIVERY BANNER */
+    .delivery-banner {
+        width: 100%;
+        background: url('medical1.webp') center/cover no-repeat;
+        padding: 70px 20px;
+        text-align: center;
+        color: white;
+        margin: 30px 0;
+    }
+
+    .delivery-banner h2 {
+        font-size: 32px;
+        text-shadow: 0px 0px 8px rgba(0,0,0,0.7);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+        .two-box, .product-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .two-box, .product-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .two-box, .product-grid {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        .box, .product-card {
+            width: 90%;
+        }
+
+        .hero h1 {
+            font-size: 22px;
+        }
+
+        .delivery-banner h2 {
+            font-size: 24px;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header-placeholder"></div>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <h1>Medical Solutions - Your Health, Our Priority</h1> 
+</section>
+
+<!-- TWO BOX SECTION -->
+<section class="two-box">
+    <div class="box">
+        <h3>Protective Masks</h3>
+        <button onclick="location.href='404.html'">Shop Now</button>
+    </div>
+    <div class="box">
+        <h3>Medical Sanitizers</h3>
+        <button onclick="location.href='404.html'">Shop Now</button>
+    </div>
+    <div class="box">
+        <h3>Gloves</h3>
+        <button onclick="location.href='404.html'">Shop Now</button>
+    </div>
+    <div class="box">
+        <h3>Thermometers</h3>
+        <button onclick="location.href='404.html'">Shop Now</button>
+    </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<h2 class="section-title">Featured Medical Products</h2>
+<div class="product-grid">
+    <div class="product-card"><img src="medical6.webp"><h4>N95 Mask</h4><p class="price">₹149</p><button onclick="location.href='404.html'">Buy</button></div>
+    <div class="product-card"><img src="medical7.webp"><h4>Medical Gloves</h4><p class="price">₹299</p><button onclick="location.href='404.html'">Buy</button></div>
+    <div class="product-card"><img src="medical8.webp"><h4>Infrared Thermometer</h4><p class="price">₹999</p><button onclick="location.href='404.html'">Buy</button></div>
+    <div class="product-card"><img src="medical9.webp"><h4>First Aid Kit</h4><p class="price">₹699</p><button onclick="location.href='404.html'">Buy</button></div>
+    <div class="product-card"><img src="medical10.webp"><h4>Oximeter</h4><p class="price">₹799</p><button onclick="location.href='404.html'">Buy</button></div>
+    <div class="product-card"><img src="medical11.webp"><h4>BP Monitor</h4><p class="price">₹1499</p><button onclick="location.href='404.html'">Buy</button></div>
+    <div class="product-card"><img src="medical12.webp"><h4>Nebulizer</h4><p class="price">₹1299</p><button onclick="location.href='404.html'">Buy</button></div>
+    <div class="product-card"><img src="medical13.webp"><h4>Surgical Tape</h4><p class="price">₹99</p><button onclick="location.href='404.html'">Buy</button></div>
+    <div class="product-card"><img src="medical14.webp"><h4>Disinfectant Liquid</h4><p class="price">₹249</p><button onclick="location.href='404.html'">Buy</button></div>
+    <div class="product-card"><img src="medical15.webp"><h4>Surgical Mask Box</h4><p class="price">₹499</p><button onclick="location.href='404.html'">Buy</button></div>
+    <div class="product-card"><img src="medical16.webp"><h4>Hand Sanitizer (500ml)</h4><p class="price">₹199</p><button onclick="location.href='404.html'">Buy</button></div>
+    <div class="product-card"><img src="medical17.webp"><h4>PPE Face Shield</h4><p class="price">₹159</p><button onclick="location.href='404.html'">Buy</button></div>
+</div>
+
+<!-- FAST DELIVERY BANNER -->
+<section class="delivery-banner">
+    <h2>Fast Delivery Across India – Safe, Quick & Reliable</h2>
+</section>
+
+<!-- LATEST PRODUCTS -->
+
+
+<!-- FOOTER -->
+<div id="footer-placeholder"></div>    
+
+<script>
+  // Load header
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+
+      // Header Interactions
+      const menuBtn = document.querySelector('.menu-btn');
+      const homeArrow = document.querySelector('.home-link span');
+
+      menuBtn?.addEventListener('click', () => {
+        document.getElementById('navBar').classList.toggle('active');
+      });
+
+      homeArrow?.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        const li = event.target.closest('li');
+        li.classList.toggle('show-submenu');
+      });
+    });
+
+  // Load footer
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+
+      // Subscribe button JS (after footer is loaded)
+      const subscribeBtn = document.getElementById('subscribeButton');
+      const emailInput = document.getElementById('newsletterEmail');
+      const emailError = document.getElementById('emailError');
+
+      subscribeBtn?.addEventListener('click', function(e) {
+        const email = emailInput.value.trim();
+        const valid = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+
+        if (valid.test(email)) {
+          // Redirect to 404error.html only if email is valid
+          window.location.href = '404.html';
+        } else {
+          e.preventDefault();
+          emailError.style.display = 'block';
+          emailInput.style.border = '2px solid #ff7a00';
+        }
+      });
+
+      emailInput?.addEventListener('input', function() {
+        emailError.style.display = 'none';
+        emailInput.style.border = 'none';
+      });
+    });
+
+  // Animate service boxes on scroll
+  const serviceBoxes = document.querySelectorAll('.service-box');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if(entry.isIntersecting){
+        entry.target.style.animation = `fadeInUp 0.8s forwards`;
+        entry.target.style.animationDelay = `${index * 0.2}s`;
+      }
+    });
+  }, {threshold:0.2});
+  serviceBoxes.forEach(box => observer.observe(box));
+</script>
+
+</body>
+</html>

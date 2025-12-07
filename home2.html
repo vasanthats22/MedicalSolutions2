@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical Solutions Home</title>
+<style>
+   /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background: #f7f7f7;
+  color: #222;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Hero Section */
+.hero {
+  background: #007b7f url('medic1.webp') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: #007b7f;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e0f7fa;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #007b7f;
+}
+
+section p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Services Grid */
+.services-grid, .success-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.service-item {
+  background: #e0f7fa;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #007b7f;
+}
+
+.success-item {
+  background: #fff3e0;
+  padding: 20px;
+  border-radius: 10px;
+  color: #ff6f00;
+  font-style: italic;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .services-grid, .success-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .services-grid, .success-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header-placeholder"></div>
+
+<!-- Medical -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Your Health, Our Priority</h1>
+    <p>Providing innovative medical solutions to keep you and your family healthy.</p>
+    <a href="4042.html" class="btn">Explore Services</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+  <h2>About Our Medical Solutions</h2>
+  <p>We deliver quality healthcare services including telemedicine, health checkups, online consultations, and pharmacy delivery. Our aim is to provide safe and reliable solutions for all patients.</p>
+</section>
+
+<!-- Services Section -->
+<section class="services" id="services">
+  <h2>Our Services</h2>
+  <div class="services-grid">
+    <div class="service-item">Telemedicine</div>
+    <div class="service-item">Health Checkups</div>
+    <div class="service-item">Pharmacy Delivery</div>
+    <div class="service-item">Online Consultations</div>
+  </div>
+</section>
+
+<!-- Success Stories Section -->
+<section class="success" id="success">
+  <h2>Patient Success Stories</h2>
+  <div class="success-grid">
+    <div class="success-item">"Recovered quickly with proper guidance."</div>
+    <div class="success-item">"Excellent service and support."</div>
+    <div class="success-item">"Highly recommend for everyone."</div>
+    <div class="success-item">"Professional and caring staff."</div>
+  </div>
+</section>
+
+<!-- Contact / CTA Section -->
+<section class="contact" id="contact">
+  <h2>Get Started Today</h2>
+  <p>Join thousands of patients benefiting from our medical solutions.</p>
+  <a href="4042.html" class="btn">Contact Us</a>
+</section>
+<!-- FOOTER -->
+<div id="footer-placeholder"></div>    
+
+<script>
+  // Load header
+  fetch('header2.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+
+      // Header Interactions
+      const menuBtn = document.querySelector('.menu-btn');
+      const homeArrow = document.querySelector('.home-link span');
+
+      menuBtn?.addEventListener('click', () => {
+        document.getElementById('navBar').classList.toggle('active');
+      });
+
+      homeArrow?.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        const li = event.target.closest('li');
+        li.classList.toggle('show-submenu');
+      });
+    });
+
+  // Load footer
+  fetch('footer2.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+
+      // Subscribe button JS (after footer is loaded)
+      const subscribeBtn = document.getElementById('subscribeButton');
+      const emailInput = document.getElementById('newsletterEmail');
+      const emailError = document.getElementById('emailError');
+
+      subscribeBtn?.addEventListener('click', function(e) {
+        const email = emailInput.value.trim();
+        const valid = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+
+        if (valid.test(email)) {
+          // Redirect to 404error.html only if email is valid
+          window.location.href = '4042.html';
+        } else {
+          e.preventDefault();
+          emailError.style.display = 'block';
+          emailInput.style.border = '2px solid #ff7a00';
+        }
+      });
+
+      emailInput?.addEventListener('input', function() {
+        emailError.style.display = 'none';
+        emailInput.style.border = 'none';
+      });
+    });
+
+  // Animate service boxes on scroll
+  const serviceBoxes = document.querySelectorAll('.service-box');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if(entry.isIntersecting){
+        entry.target.style.animation = `fadeInUp 0.8s forwards`;
+        entry.target.style.animationDelay = `${index * 0.2}s`;
+      }
+    });
+  }, {threshold:0.2});
+  serviceBoxes.forEach(box => observer.observe(box));
+
+const subscribeBtn = document.getElementById('subscribeButton');
+const emailInput = document.getElementById('newsletterEmail');
+const emailError = document.getElementById('emailError');
+
+subscribeBtn.addEventListener('click', function(e) {
+    const email = emailInput.value.trim();
+    const validEmail = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+
+    if (!validEmail.test(email)) {
+        e.preventDefault(); // prevent redirect
+        emailError.style.display = 'block'; // show error
+        emailInput.style.border = '2px solid #ff7a00';
+    } else {
+        // Redirect only if email is valid
+        window.location.href = '4042.html';
+    }
+});
+
+emailInput.addEventListener('input', function() {
+    emailError.style.display = 'none';
+    emailInput.style.border = '1px solid #ccc';
+});
+</script>
+
+</body>
+</html>
